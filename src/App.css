@@ -9,14 +9,20 @@ body {
 }
 .phone-name {
   padding: 16px;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 0px;
 }
 
-.phone-company {
+.phone-price {
+  font-size: 24px;
+  color: red;
+  margin-top: 0px;  
+}
+
+.final-price {
   font-size: 32px;
-  color: grey;
-  margin-top: 0px;
+  color: green;
+  margin-top: 0px;  
 }
 
 .phone-img {

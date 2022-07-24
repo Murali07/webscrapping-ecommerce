@@ -19,16 +19,16 @@ import HomeIcon from '@mui/icons-material/Home';
     
 //       <div className="App">
 
-//         <AppBar position="static">
-//           <Toolbar>                   
+        // <AppBar position="static">
+        //   <Toolbar>                   
             
-//             <Button onClick={() => navigate(`/`)} color="inherit"><HomeIcon></HomeIcon>Home</Button>
-//             <Button onClick={() => navigate(`/mobiles`)} color="inherit">Mobiles</Button>
-//             <Button onClick={() => navigate(`/fashion`)} color="inherit">Fashion</Button>
-//             <Button onClick={() => navigate(`/electronics`)} color="inherit">Electronics</Button>
+        //     <Button onClick={() => navigate(`/`)} color="inherit"><HomeIcon></HomeIcon>Home</Button>
+        //     <Button onClick={() => navigate(`/mobiles`)} color="inherit">Mobiles</Button>
+        //     <Button onClick={() => navigate(`/fashion`)} color="inherit">Fashion</Button>
+        //     <Button onClick={() => navigate(`/electronics`)} color="inherit">Electronics</Button>
             
-//           </Toolbar>
-//         </AppBar>
+        //   </Toolbar>
+        // </AppBar>
 
 //         <Routes>
 //           <Route path="/" element={<Home />} />
@@ -121,14 +121,26 @@ const mobiles = [
 
 function App(){  
 
+  // const navigate = useNavigate();
+
   return (
     <div className='App'>
 
+      <AppBar position="static">
+        <Toolbar>
+          <Button color="inherit"><HomeIcon></HomeIcon>Home</Button>
+          <Button color="inherit">Electronics</Button>
+          <Button color="inherit">Fashion</Button>          
+
+        </Toolbar>
+      </AppBar>
+      
       <div className='phone-list-container'>
         {mobiles.map((mb) => (
         <Electronics mobile={mb} /> 
         ))}
-      </div>
+      </div>   
+            
       
     </div>
   );
@@ -166,7 +178,7 @@ function Electronics( {mobile} ){
 
       <img className='phone-img' src={mobile.img} alt={mobile.title} ></img>
       <h2 className='phone-name'> {mobile.title} </h2>
-      <p className='phone-rating'> {mobile.rating} </p>
+      <p className='phone-rating'> ⭐ {mobile.rating} </p>
       <h5 className='phone-price'>{mobile.price} </h5>
       <h4 className='final-price'> {mobile.final_price} </h4>
       
