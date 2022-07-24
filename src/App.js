@@ -9,7 +9,7 @@ import HomeIcon from '@mui/icons-material/Home';
 // import InfoIcon from '@mui/icons-material/Info';
 import IconButton from '@mui/material/IconButton';
 // import { ThemeProvider, createTheme } from '@mui/material/styles';
-import JSONDATA from "./mockdata.json";
+// import JSONDATA from "./mockdata.json";
 import SearchIcon from '@mui/icons-material/Search';
 
 // function App() {
@@ -163,7 +163,7 @@ function App(){
         <IconButton><SearchIcon></SearchIcon></IconButton>                  
         
 
-        {JSONDATA.filter((val) => {
+        {mobiles.filter((val) => {
           if(searchText === ""){
             return val
           }
