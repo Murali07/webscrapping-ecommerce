@@ -63,3 +63,12 @@ body {
   padding-left: 10px;
 
 }
+
+/* Navbar */
+.navbar-nav a{
+  font-size: 18px;
+}
+.card-img{
+  height: 750px;
+  object-fit:fill;
+}
